@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://baffebjy4pdhd"]
+
+[ext_resource type="Script" uid="uid://cvfpstdwu64r1" path="res://label.gd" id="1_y38sv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y38sv"]
+
+[node name="Label" type="Label" unique_id=1579537050 node_paths=PackedStringArray("shortcut_context")]
+offset_left = -69.0
+offset_top = -56.0
+offset_right = 145.0
+offset_bottom = 80.0
+shortcut_context = NodePath(".")
+text = "0"
+label_settings = SubResource("LabelSettings_y38sv")
+script = ExtResource("1_y38sv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1089188551]
+
+[node name="Button" type="Button" parent="." unique_id=2013750895]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -11.0
+offset_top = -5.0
+offset_right = 21.0
+offset_bottom = 31.0
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
